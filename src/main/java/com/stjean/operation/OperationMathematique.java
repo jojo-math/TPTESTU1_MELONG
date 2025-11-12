@@ -8,6 +8,9 @@ public class OperationMathematique {
         Integer[] copy = Arrays.copyOf(listes, listes.length);
         Arrays.sort(copy, (a, b) -> b - a); // décroissant
         return copy;
+
+    }
+
     public boolean estPositif(int nombre) {
         return nombre >= 0;
     }
