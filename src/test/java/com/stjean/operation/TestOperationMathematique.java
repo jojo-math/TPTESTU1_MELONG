@@ -3,6 +3,8 @@ package com.stjean.operation;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import static org.junit.Assert.assertThrows;
+
 class TestOperationMathematique {
 
     @Test
@@ -20,4 +22,11 @@ class TestOperationMathematique {
         Assert.assertEquals(1, op.factoriel(1));
         Assert.assertEquals(120, op.factoriel(5));
     }
+
+    @Test
+    void factoriel_throws_onNegative() {
+        var op = new OperationMathematique();
+        assertThrows(IllegalParamISIException.class, () -> op.factoriel(-3));
+    }
+
 }
