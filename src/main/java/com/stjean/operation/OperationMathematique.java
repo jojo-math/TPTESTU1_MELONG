@@ -16,9 +16,10 @@ public class OperationMathematique {
     }
 
     public long factoriel(int n) {
-        if (n < 0) throw new IllegalArgumentException("n < 0");
+        if (n < 0) throw new IllegalParamISIException("Factoriel: n négatif");
         long res = 1;
         for (int i = 2; i <= n; i++) res *= i;
         return res;
     }
+
 }
