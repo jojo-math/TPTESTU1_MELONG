@@ -22,4 +22,15 @@ public class OperationMathematique {
         return res;
     }
 
+    public double maxNumba(double[] valeurs) {
+        if (valeurs == null || valeurs.length == 0)
+            throw new IllegalArgumentException("Tableau vide");
+        double max = valeurs[0];
+        for (int i = 1; i < valeurs.length; i++) {
+            if (valeurs[i] > max) max = valeurs[i];
+        }
+        return max;
+    }
+
+
 }
